@@ -51,53 +51,55 @@ class ListAllPage extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Container(
+                      child: Card(
                         margin: const EdgeInsets.all(10),
                         color: theme.getTheme() == theme.lightTheme
                 ? Colors.grey.shade200
                 : Colors.grey.shade800,
-                        child: SizedBox(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.network(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 100,
+                              width: 400,
+                              child: Image.network(
                                 restaurant[index].pictureId,
                                 fit: BoxFit.cover,
                               ),
-                              SizedBox(
-                                width: MediaQuery.of(context).size.width,
-                                child: Text(
+                            ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: Text(
+                                maxLines: 1,
+                                restaurant[index].name,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                overflow: TextOverflow.fade,
+                              ),
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                const Icon(
+                                  Icons.location_on_rounded,
+                                  color: Colors.red,
+                                  size: 15,
+                                ),
+                                Text(
                                   maxLines: 1,
-                                  restaurant[index].name,
+                                  overflow: TextOverflow.fade,
+                                  restaurant[index].city,
                                   style: GoogleFonts.poppins(
                                     fontSize: 14,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w200,
                                   ),
-                                  overflow: TextOverflow.fade,
                                 ),
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  const Icon(
-                                    Icons.location_on_rounded,
-                                    color: Colors.red,
-                                    size: 15,
-                                  ),
-                                  Text(
-                                    maxLines: 1,
-                                    overflow: TextOverflow.fade,
-                                    restaurant[index].city,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                              ],
+                            ),
+                          ],
                         ),
                       ));
                 },
