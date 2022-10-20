@@ -56,11 +56,11 @@ class ThemeNotifier with ChangeNotifier {
     notifyListeners();
   }
 
-  void changeTheme(){
-    if(_themeData == darkTheme){
+  void changeTheme() {
+    if (_themeData == darkTheme) {
       setLightMode();
       notifyListeners();
-    }else{
+    } else {
       setDarkMode();
       notifyListeners();
     }

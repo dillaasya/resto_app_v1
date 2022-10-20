@@ -11,9 +11,8 @@ class ListAllPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     final theme = Provider.of<ThemeNotifier>(context, listen: true);
-    
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -30,7 +29,6 @@ class ListAllPage extends StatelessWidget {
                 return const Text("There is something wrong");
               }
 
-              
               final restaurant =
                   restaurantFromJson(snapshot.data ?? "").restaurants;
 
@@ -54,8 +52,8 @@ class ListAllPage extends StatelessWidget {
                       child: Card(
                         margin: const EdgeInsets.all(10),
                         color: theme.getTheme() == theme.lightTheme
-                ? Colors.grey.shade200
-                : Colors.grey.shade800,
+                            ? Colors.grey.shade200
+                            : Colors.grey.shade800,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

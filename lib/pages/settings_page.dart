@@ -55,17 +55,15 @@ class _SettingsPageState extends State<SettingsPage> {
                       ],
                     ),
                     Switch(
-                      value: theme.getTheme() == theme.darkTheme,
-                      activeColor: Colors.redAccent,
-                      onChanged: (v) {
-                        theme.changeTheme();
-                      }),
+                        value: theme.getTheme() == theme.darkTheme,
+                        activeColor: Colors.redAccent,
+                        onChanged: (v) {
+                          theme.changeTheme();
+                        }),
                   ],
                 ),
               ),
-
               const Divider(),
-
             ],
           ),
         ),

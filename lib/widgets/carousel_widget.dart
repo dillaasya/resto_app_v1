@@ -28,7 +28,7 @@ class CarouselWidget extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(Colors.redAccent));
-          }else if(snapshot.hasError){
+          } else if (snapshot.hasError) {
             return const Text("There is something wrong");
           }
 
@@ -69,7 +69,9 @@ class CarouselWidget extends StatelessWidget {
                                 ),
                               )),
                           //Text(restaurant[index].id),
-                          const SizedBox(height: 10,),
+                          const SizedBox(
+                            height: 10,
+                          ),
                           SizedBox(
                             width: width,
                             child: Text(
@@ -86,7 +88,11 @@ class CarouselWidget extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              const Icon(Icons.location_on_rounded, color: Colors.red,size: 15,),
+                              const Icon(
+                                Icons.location_on_rounded,
+                                color: Colors.red,
+                                size: 15,
+                              ),
                               Text(
                                 maxLines: 1,
                                 overflow: TextOverflow.fade,

@@ -5,7 +5,6 @@ import 'package:readmore/readmore.dart';
 import 'package:resto_app_1/models/resaurant_model.dart';
 
 import '../theme/theme_provider.dart';
-//import 'package:readmore/readmore.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({
@@ -128,8 +127,8 @@ class _DetailPageState extends State<DetailPage> {
               ),
               ExpansionTile(
                 textColor: theme.getTheme() == theme.lightTheme
-                              ? Colors.black
-                              : Colors.white,
+                    ? Colors.black
+                    : Colors.white,
                 title: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: Text("Food Menu",
@@ -173,8 +172,8 @@ class _DetailPageState extends State<DetailPage> {
               ),
               ExpansionTile(
                 textColor: theme.getTheme() == theme.lightTheme
-                              ? Colors.black
-                              : Colors.white,
+                    ? Colors.black
+                    : Colors.white,
                 title: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: Text("Drink Menu",

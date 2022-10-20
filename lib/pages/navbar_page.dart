@@ -50,7 +50,10 @@ class _NavbarPageState extends State<NavbarPage> {
             showUnselectedLabels: false,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(Icons.home,color: Colors.grey,),
+                icon: Icon(
+                  Icons.home,
+                  color: Colors.grey,
+                ),
                 activeIcon: Icon(
                   Icons.home,
                   color: Colors.red,
@@ -58,7 +61,10 @@ class _NavbarPageState extends State<NavbarPage> {
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.settings, color: Colors.grey,),
+                icon: Icon(
+                  Icons.settings,
+                  color: Colors.grey,
+                ),
                 activeIcon: Icon(
                   Icons.settings,
                   color: Colors.red,
