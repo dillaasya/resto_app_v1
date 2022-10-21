@@ -57,16 +57,14 @@ class ListAllPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              height: 100,
-                              width: 400,
+                            Expanded(
                               child: Image.network(
                                 restaurant[index].pictureId,
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 4, left: 4),
                               child: Text(
                                 maxLines: 1,
                                 restaurant[index].name,
@@ -77,25 +75,29 @@ class ListAllPage extends StatelessWidget {
                                 overflow: TextOverflow.fade,
                               ),
                             ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                const Icon(
-                                  Icons.location_on_rounded,
-                                  color: Colors.red,
-                                  size: 15,
-                                ),
-                                Text(
-                                  maxLines: 1,
-                                  overflow: TextOverflow.fade,
-                                  restaurant[index].city,
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w200,
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 4, bottom: 4),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  const Icon(
+                                    Icons.location_on_rounded,
+                                    color: Colors.red,
+                                    size: 15,
                                   ),
-                                ),
-                              ],
+                                  Text(
+                                    maxLines: 1,
+                                    overflow: TextOverflow.fade,
+                                    restaurant[index].city,
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w200,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -103,7 +105,7 @@ class ListAllPage extends StatelessWidget {
                 },
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.97,
+                  childAspectRatio: 1,
                 ),
               );
             },
